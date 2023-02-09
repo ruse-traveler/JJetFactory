@@ -2,10 +2,12 @@
 // Derek Anderson
 // 02.09.2023
 //
-// Definition of EICrecon jet
+// Definition of an EICrecon jet
 
 #ifndef EICRECON_JET_H
 #define EICRECON_JET_H
+
+#include <vector>
 
 namespace eicrecon {
 

@@ -1,0 +1,20 @@
+# 'Jet.yaml'
+# Derek Anderson
+# 02.09.2023
+#
+# strawman for yaml description
+# eicrecon jet object.
+
+edm4eic::Jet:
+  Description: "Generic jet"
+  Author: "D. Anderson"
+  Members:
+    - uint32_t          nCsts        // number of constituents
+    - float             area         // jet area
+    - float             energy       // jet energy
+    - edm4eic::Vector3f momentum     // jet 3-momentum
+  VectorMembers:
+    - float             cstEnergy    // constituent energy
+    - edm4eic::Vector3f cstMomentum  // constituent 3-momentum 
+
+# end -------------------------------------------------------------------------   

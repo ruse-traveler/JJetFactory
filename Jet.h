@@ -41,7 +41,7 @@ namespace eicrecon {
       std::vector<float> cstEnergy()               {return m_cstEnergy;}
       std::vector<edm4hep::Vector3f> cstMomentum() {return m_cstMomentum();}
 
-  }  // end jet class
+  };  // end jet class
 
 }  // end eicrecon namespace
 

@@ -13,6 +13,32 @@ namespace eicrecon {
 
   class Jet {
 
+    public:
+
+      // ctor/dtor
+      Jet() {};
+      ~Jet();
+
+      // setters
+      void setNCsts(uint32_t nCsts)                              {m_nCsts       = nCsts;}
+      void setArea(float area)                                   {m_area        = area;}
+      void setEnergy(float energy)                               {m_energy      = energy;}
+      void setMomentum(edm4hep::Vector3f momentum)               {m_momentum    = momentum;}
+      void setCstEnergies(std::vector<float> energies)           {m_cstEnergy   = energies;}
+      void setCstMomenta(std::vector<edm4hep::Vector3f> momenta) {m_cstMomentum = momenta;}
+
+      // jet getters
+      uint32_t          nCsts()    {return m_nCsts;}
+      float             area()     {return m_area;}
+      float             energy()   {return m_energy;}
+      edm4eic::Vector3f momentum() {return m_momentum;}
+
+      // constituent getters
+      float                          cstEnergy(uint32_t iCst)   {return m_cstEnergy.at(iCst);}
+      edm4hep::Vector3f              cstMomentum(uint32_t iCst) {return m_cstMomentum.at(iCst);}
+      std::vector<float>             cstEnergy()                {return m_cstEnergy;}
+      std::vector<edm4hep::Vector3f> cstMomentum()              {return m_cstMomentum;}
+
     private:
 
       // jet information
@@ -24,22 +50,6 @@ namespace eicrecon {
       // constituent information
       std::vector<float>             m_cstEnergy;
       std::vector<edm4hep::Vector3f> m_cstMomentum;
-
-    public:
-
-      // jet getters
-      uint32_t          nCsts()    {return m_nCsts;}
-      float             area()     {return m_area;}
-      float             energy()   {return m_energy;}
-      emd4eic::Vector3f momentum() {return m_momentum;}
-
-      // getters for individual constituents
-      float             cstEnergy(uint32_t iCst)   {return m_cstEnergy.at(iCst);}
-      edm4hep::Vector3f cstMomentum(uint32_t iCst) {return m_cstMomentum.at(iCst);}
-
-      // getters for constituent vectors
-      std::vector<float> cstEnergy()               {return m_cstEnergy;}
-      std::vector<edm4hep::Vector3f> cstMomentum() {return m_cstMomentum();}
 
   };  // end jet class
 

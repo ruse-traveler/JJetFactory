@@ -1,8 +1,13 @@
+// Created by Dmitry Romanov
+// Subject to the terms in the LICENSE file found in the top-level directory
+//
+// ----------------------------------------------------------------------------
 // 'Jets.h'
 // Derek Anderson
 // 02.09.2023
 //
 // Definition of an EICrecon jet
+// ----------------------------------------------------------------------------
 
 #ifndef EICRECON_JET_H
 #define EICRECON_JET_H
@@ -11,6 +16,7 @@
 
 namespace eicrecon {
 
+  // jet definition
   class Jet {
 
     public:

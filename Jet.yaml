@@ -7,14 +7,14 @@
 
 edm4eic::Jet:
   Description: "Generic jet"
-  Author: "D. Anderson"
+  Author: "Derek Anderson, Zhongling Ji"
   Members:
     - uint32_t          nCsts        // number of constituents
     - float             area         // jet area
     - float             energy       // jet energy
-    - edm4eic::Vector3f momentum     // jet 3-momentum
+    - edm4hep::Vector3f momentum     // jet 3-momentum
   VectorMembers:
     - float             cstEnergy    // constituent energy
-    - edm4eic::Vector3f cstMomentum  // constituent 3-momentum 
+    - edm4hep::Vector3f cstMomentum  // constituent 3-momentum 
 
 # end -------------------------------------------------------------------------   
